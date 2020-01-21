@@ -22,6 +22,13 @@ namespace Vytas_Lab3
             e.Graphics.FillRectangle(Brushes.Yellow, rectangle);
         }
 
+        private void PictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.FillEllipse(Brushes.Red, circle);
+            e.Graphics.FillRectangle(Brushes.Blue, square);
+            e.Graphics.FillRectangle(Brushes.Yellow, rectangle);
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +41,6 @@ namespace Vytas_Lab3
 
         private void OnTimerEvent(object sender, EventArgs e)
         {
-            label1.Text = score.ToString();
             square.Y = square.Y + speed;
             rectangle.Y = rectangle.Y + speed;
             if ((rectangle.Location.X < circle.X + circle.Width) && (rectangle.Location.X > circle.X - circle.Width) &&
@@ -57,6 +63,7 @@ namespace Vytas_Lab3
                 timer1.Enabled = false;
                 button1.Enabled = true;
                 button1.Text = "Restart";
+                speed = 4;
             }
             pictureBox1.Invalidate();
         }
@@ -68,6 +75,7 @@ namespace Vytas_Lab3
             {
                 speed = speed + 2;
             }
+            label1.Text = score.ToString();
         }
 
         private void PictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -114,6 +122,8 @@ namespace Vytas_Lab3
             timer1.Enabled = true;
             button1.Enabled = false;
             button1.Text = "";
+            score = 0;
+            label1.Text = score.ToString();
         }
 
         private void PictureBox1_MouseMove(object sender, MouseEventArgs e)
