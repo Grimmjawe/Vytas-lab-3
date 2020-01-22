@@ -8,3 +8,5 @@ C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\bin\Debug\Vytas_Lab3.exe
 C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\bin\Debug\Vytas_Lab3.pdb
 C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\obj\Debug\Vytas_Lab3.exe
 C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\obj\Debug\Vytas_Lab3.pdb
+C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\obj\Debug\Vytas_Lab3.Menu.resources
+C:\Users\opilane\source\repos\Vytas_Lab3\Vytas_Lab3\obj\Debug\Vytas_Lab3.Options.resources

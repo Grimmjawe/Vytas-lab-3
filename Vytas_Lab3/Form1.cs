@@ -6,31 +6,30 @@ namespace Vytas_Lab3
 {
     public partial class Form1 : Form
     {
-        bool circleClicked = false;
         int score, x2, LastClicked = 0;
         int speed = 4;
         Random rand = new Random();
         Timer timer1 = new Timer { Interval = 1};
+        bool circleClicked = false;
+
+        Brush circleC, squareC, rectangleC;
+
         Rectangle circle = new Rectangle(175, 600, 50, 50);
         Rectangle square = new Rectangle(250, -80, 50, 50);
         Rectangle rectangle = new Rectangle(50, -200, 25, 70);
 
         private void PictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillEllipse(Brushes.Red, circle);
-            e.Graphics.FillRectangle(Brushes.Blue, square);
-            e.Graphics.FillRectangle(Brushes.Yellow, rectangle);
+            e.Graphics.FillEllipse(circleC, circle);
+            e.Graphics.FillRectangle(squareC, square);
+            e.Graphics.FillRectangle(rectangleC, rectangle);
         }
 
-        private void PictureBox2_Paint(object sender, PaintEventArgs e)
+        public Form1(Brush circleC2, Brush squareC2, Brush rectangleC2)
         {
-            e.Graphics.FillEllipse(Brushes.Red, circle);
-            e.Graphics.FillRectangle(Brushes.Blue, square);
-            e.Graphics.FillRectangle(Brushes.Yellow, rectangle);
-        }
-
-        public Form1()
-        {
+            circleC = circleC2;
+            squareC = squareC2;
+            rectangleC = rectangleC2;
             InitializeComponent();
             pictureBox1.MouseDown += PictureBox1_MouseDown;
             pictureBox1.MouseMove += PictureBox1_MouseMove;
